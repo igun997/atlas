@@ -7,7 +7,7 @@ RUN apk add --no-cache openssl
 
 # Install modules with dev dependencies
 COPY package.json yarn.lock /build/
-RUN yarn install --frozen-lockfile
+RUN yarn install 
 
 # Build
 COPY . /build
