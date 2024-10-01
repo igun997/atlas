@@ -16,7 +16,7 @@ RUN yarn build
 
 # Regenerate node modules as production
 RUN rm -rf ./node_modules
-RUN yarn install --production --frozen-lockfile
+RUN yarn install --production
 
 # Bundle stage
 FROM node:15-alpine AS production
